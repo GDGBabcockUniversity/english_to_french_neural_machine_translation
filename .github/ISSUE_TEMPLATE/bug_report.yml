@@ -1,0 +1,90 @@
+name: Bug report
+description: Something is broken. Tell us what, and how to make it happen again.
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Fill every required field.
+        Vague reports cannot be fixed. If you cannot reproduce it, say so in the steps.
+
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: One or two sentences. Observable behaviour only, no guesses at the cause.
+      placeholder: "POST /translate with text \"hello\" returned 500 instead of 200."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+      description: One or two sentences.
+      placeholder: "It should return {\"translation\": \"bonjour\"}."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: |
+        Numbered list. Exact commands, exact inputs. Someone else must be able to follow it
+        and see the same result.
+      placeholder: |
+        1. git checkout main
+        2. pip install -r backend/requirements.txt
+        3. uvicorn backend.main:app --reload
+        4. curl -X POST localhost:8000/translate -H "Content-Type: application/json" -d '{"text":"hello"}'
+        5. See 500
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Which part of the project?
+      description: Pick the closest. If unsure, pick "not sure" — a maintainer will re-label.
+      options:
+        - datasets
+        - training
+        - backend
+        - frontend
+        - docs
+        - infra
+        - not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Operating system, Python version, and the git commit or branch you were on.
+      placeholder: |
+        OS: Ubuntu 22.04
+        Python: 3.10.12
+        Commit: a1b2c3d
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs, traceback, or screenshots
+      description: Paste the full error. Optional — skip if none.
+      render: shell
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues and this is not a duplicate.
+          required: true
+        - label: I can reproduce this on the latest `main`.
+          required: true

@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+transformers==4.57.6
+peft
+torch
+pydantic
+python-dotenv

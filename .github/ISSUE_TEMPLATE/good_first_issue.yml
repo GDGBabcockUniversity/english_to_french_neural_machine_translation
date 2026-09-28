@@ -1,0 +1,88 @@
+name: Good first issue
+description: A small, well-scoped task for a first-time contributor. Maintainers only.
+title: "[Good first issue]: "
+labels: ["good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Maintainers only.** This form is for filing a task, not for requesting one.
+        If you are a new contributor and want something to work on, browse issues labelled
+        [`good first issue`](../../labels/good%20first%20issue) instead.
+
+        Every field below is required. A vague task is not a good first issue.
+
+  - type: textarea
+    id: what-to-do
+    attributes:
+      label: What to do
+      description: One task. Name the exact file and the exact change.
+      placeholder: |
+        In CONTRIBUTING.md, section "Datasets stream", add a "Done when:" line to each
+        contribution example.
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why
+      description: One short paragraph. Link any doc that explains the background.
+      placeholder: |
+        CONTRIBUTING.md examples currently state a category, not a finish line. See
+        docs/setup.md for the style we want.
+    validations:
+      required: true
+
+  - type: textarea
+    id: done-when
+    attributes:
+      label: Done when
+      description: One checkable condition. Not "looks good" — something a reviewer can verify.
+      placeholder: "Every contribution example in CONTRIBUTING.md ends with a `Done when:` line."
+    validations:
+      required: true
+
+  - type: textarea
+    id: files
+    attributes:
+      label: Files to touch
+      description: List every file. If it is one file, say one file.
+      placeholder: |
+        - CONTRIBUTING.md
+    validations:
+      required: true
+
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: |
+        What this task does NOT include. Be explicit — this stops the contributor from
+        wandering into unrelated changes.
+      placeholder: |
+        Do not edit DATASETS.md. Do not add new sections. Do not reword existing prose.
+    validations:
+      required: true
+
+  - type: textarea
+    id: how-to-verify
+    attributes:
+      label: How to verify
+      description: Exact command or exact manual step the contributor runs before opening a PR.
+      placeholder: |
+        grep -n "Done when:" CONTRIBUTING.md
+        Expect one match per contribution example.
+    validations:
+      required: true
+
+  - type: textarea
+    id: where-to-ask
+    attributes:
+      label: Where to ask
+      description: Fixed. Do not edit.
+      value: |
+        Read CONTRIBUTING.md first: it explains the PR flow, the review tiers, and how to
+        get help. If you are still stuck, comment on this issue.
+    validations:
+      required: false
