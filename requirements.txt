@@ -1,6 +1,5 @@
 ### `requirements.txt`
 
-```text
 accelerate==1.15.0
 datasets==5.0.1
 evaluate==0.4.6
@@ -14,11 +13,9 @@ sacrebleu==2.6.0
 torch==2.14.0
 transformers==5.17.0
 uvicorn==0.50.1
-```
 
 ### `training/requirements.txt`
 
-```text
 accelerate==1.15.0
 datasets==5.0.1
 evaluate==0.4.6
@@ -27,11 +24,9 @@ pyyaml==6.0.3
 sacrebleu==2.6.0
 torch==2.14.0
 transformers==5.17.0
-```
 
 ### `backend/requirements.txt`
 
-```text
 fastapi==0.140.3
 huggingface_hub==1.26.0
 pydantic==2.13.5
@@ -40,4 +35,3 @@ requests==2.34.2
 torch==2.14.0
 transformers==5.17.0
 uvicorn==0.50.1
-```
