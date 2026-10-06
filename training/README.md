@@ -22,11 +22,6 @@ To evaluate, upload `eval.ipynb` to Kaggle the same way and run all cells.
 ## Run locally (requires a GPU)
 
 1. Install dependencies:
-
-   ```bash
-   pip install -r training/requirements.txt
-   ```
-
 2. Open `train.ipynb` in Jupyter and run all cells.
 3. The adapter is saved to `./models/`.
 4. Push the adapter to the Hugging Face Hub under `GDGBabcockUniversity-26/english_to_french_nmt_adapters subfolder <adapter-name>`.
