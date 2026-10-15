@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English to French Translator</title>
+</head>
+<body>
+    <header>
+        <h1>English to French Translator</h1>
+    </header>
+
+    <main>
+        <p>Enter your English word or phrase below and click
+            "Translate" to see the French translation.</p>
+
+        <label for="inputText">English:</label>
+        <textarea
+            id="inputText"
+            rows="14"
+            cols="50"
+            placeholder="Enter English text here..."
+        ></textarea>
+
+        <label for="outputText">French:</label>
+        <textarea
+            id="outputText"
+            rows="14"
+            cols="50"
+            placeholder="French translation will appear here..."
+            readonly
+        ></textarea>
+
+        <button id="translateButton" type="button">Translate</button>
+        <button id="copyButton" type="button">Copy</button>
+        <button id="clearButton" type="button">Clear</button>
+    </main>
+</body>
+</html>
