@@ -1,0 +1,206 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Jua&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-color:black;
+    position:relative;
+    display:flow-root; 
+}
+body > svg{
+    position:absolute;
+    top:0;
+    left:0;
+    width:300px;
+    height:auto;
+    z-index:0;
+    pointer-events:none;
+}
+.globe-decoration{
+    top:20px;
+    left:0;
+    width:380px;
+}
+.top-right-decoration{
+    position:absolute;
+    top:0;
+    left:auto;
+    right:0;
+    margin:0;
+    width:290px;
+    height:auto;
+    display:block;
+    pointer-events:none;
+}
+.translation-decoration{
+    top:65px;
+    left:auto;
+    right:40px;
+    width:120px;
+}
+.mainContent{
+    width:83%;
+    margin:50px auto 0;
+    box-sizing:border-box;
+    position:relative;
+    z-index:1;
+}
+h1{
+    font-family:'Jua', sans-serif;
+    font-size:clamp(40px, 4vw, 60px);
+    line-height:1.05;
+}
+.english{
+    color:#DD0D0D
+}
+.to{
+    color:white;
+}
+.french{
+    color:#171991
+}
+
+p{
+    color:white;
+    font-family:'Inter', sans-serif;
+    font-size:22px;
+}
+.instruction{
+    margin-top:110px;
+}
+
+#translateButton{
+    border:none;
+    color:white;
+    background-color:#4285F4;
+}
+#copyButton{
+    border:none;
+    color:white;
+    background-color:#34A853;
+}
+#clearButton{
+    border:none;
+    color:white;
+    background-color:#EA4335;
+}
+.languageContainer button{
+    width:68%;
+    height:48px;
+    border-radius:6px;
+    color:white;
+    font-family:inherit;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.languageContainer{
+    background-color:white;
+    border: 1px solid #FBBC05;
+    padding:13px;
+    border-radius:6px;
+    box-sizing:border-box;
+    flex:1;
+    min-width:0;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto 200px 48px;
+    column-gap:30px;
+    row-gap:30px;
+    position:relative;
+    z-index:1;
+}
+.languageContainer label{
+    display:block;
+    grid-column:1 / -1;
+    margin:0;
+    padding-bottom:5px;
+    border-bottom:1px solid #333;
+    font-family:inherit;
+    font-size:20px;
+    font-weight:400;
+    line-height:1.3;
+}
+.languageContainer textarea{
+    grid-column:1 / -1;
+    width:100%;
+    height:200px;
+    box-sizing:border-box;
+    resize:none;
+    padding:10px;
+    border:1px solid #777;
+    border-radius:6px;
+    font-family:inherit;
+    font-size:18px;
+}
+#outputText{
+    border-color:#3F3FD0;
+}
+#inputText:focus,
+#outputText:focus{
+    border-color:#FBBC05;
+}
+textarea:focus-visible,
+button:focus-visible{
+    outline:3px solid #333;
+    outline-offset:3px;
+}
+
+.container{
+    margin-top:24px;
+    display:flex;
+    gap:16px;
+    width:100%;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+.siteFooter{
+    margin-top:48px;
+    padding:28px 7.5vw 24px;
+}
+.footerLogo{
+    width:min(200px, 100%);
+    margin-bottom:16px;
+}
+.footerContent h2{
+    margin-bottom:4px;
+    font-size:20px;
+}
+.footerContent p{
+    font-size:14px;
+    line-height:1.4;
+}
+
+@media (max-width:700px){
+    body{
+        overflow-x:hidden;
+    }
+    .mainContent{
+        width:calc(100% - 32px);
+        margin-top:32px;
+    }
+    h1{
+        font-size:clamp(24px, 7vw, 34px);
+    }
+    p{
+        font-size:18px;
+    }
+    .instruction{
+        margin-top:64px;
+    }
+    .container{
+        flex-direction:column;
+        gap:16px;
+    }
+    .languageContainer{
+        flex:initial;
+        width:100%;
+        column-gap:16px;
+    }
+    .languageContainer button{
+        width:100%;
+    }
+}
