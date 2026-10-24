@@ -5,39 +5,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English to French Translator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body> 
+    <img class="top-right-decoration" src="image.png" alt="" aria-hidden="true">
+<svg class="translation-decoration" width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M190.297 167.352L146.547 79.8516C146.288 79.3315 145.889 78.8941 145.395 78.5883C144.901 78.2825 144.331 78.1205 143.75 78.1205C143.169 78.1205 142.599 78.2825 142.105 78.5883C141.611 78.8941 141.212 79.3315 140.953 79.8516L123.086 115.625C107.238 115.181 91.9807 109.512 79.6875 99.5C93.9137 85.5878 102.275 66.7578 103.055 46.875H125C125.829 46.875 126.624 46.5458 127.21 45.9597C127.796 45.3737 128.125 44.5788 128.125 43.75C128.125 42.9212 127.796 42.1263 127.21 41.5403C126.624 40.9542 125.829 40.625 125 40.625H78.125V25C78.125 24.1712 77.7958 23.3763 77.2097 22.7903C76.6237 22.2042 75.8288 21.875 75 21.875C74.1712 21.875 73.3763 22.2042 72.7903 22.7903C72.2042 23.3763 71.875 24.1712 71.875 25V40.625H25C24.1712 40.625 23.3763 40.9542 22.7903 41.5403C22.2042 42.1263 21.875 42.9212 21.875 43.75C21.875 44.5788 22.2042 45.3737 22.7903 45.9597C23.3763 46.5458 24.1712 46.875 25 46.875H96.8047C96.0139 65.2302 88.2091 82.5821 75 95.3516C67.0148 87.6358 60.9259 78.1749 57.2109 67.7109C57.0849 67.3111 56.8796 66.9407 56.6074 66.6218C56.3353 66.3029 56.0017 66.0421 55.6266 65.8548C55.2515 65.6675 54.8426 65.5576 54.4241 65.5316C54.0057 65.5056 53.5863 65.5641 53.1909 65.7036C52.7955 65.8431 52.4323 66.0607 52.1227 66.3435C51.8132 66.6263 51.5638 66.9685 51.3892 67.3497C51.2147 67.7309 51.1186 68.1433 51.1068 68.5624C51.095 68.9814 51.1676 69.3986 51.3203 69.7891C55.295 81.0064 61.7896 91.1627 70.3047 99.4766C57.5184 109.925 41.5123 115.63 25 115.625C24.1712 115.625 23.3763 115.954 22.7903 116.54C22.2042 117.126 21.875 117.921 21.875 118.75C21.875 119.579 22.2042 120.374 22.7903 120.96C23.3763 121.546 24.1712 121.875 25 121.875C43.2798 121.895 60.9825 115.475 75 103.742C87.732 114.354 103.506 120.646 120.047 121.711L97.2188 167.359C97.0351 167.727 96.9256 168.127 96.8965 168.536C96.8674 168.946 96.9192 169.357 97.0491 169.747C97.3113 170.533 97.8754 171.184 98.6172 171.555C99.359 171.926 100.218 171.987 101.004 171.724C101.791 171.462 102.442 170.898 102.813 170.156L114.43 146.875H173.07L184.703 170.148C184.963 170.668 185.362 171.104 185.856 171.409C186.35 171.714 186.919 171.875 187.5 171.875C187.985 171.873 188.463 171.761 188.898 171.547C189.266 171.363 189.594 171.109 189.863 170.799C190.132 170.489 190.337 170.129 190.467 169.739C190.597 169.349 190.649 168.938 190.62 168.528C190.591 168.119 190.481 167.719 190.297 167.352ZM117.555 140.625L143.75 88.2344L169.945 140.625H117.555Z" fill="#FFCD29"/>
+</svg>
+<div class="mainContent">
     <header>
-        <h1>English to French Translator</h1>
+        <h1 class="title">
+        <span class="english">ENGLISH</span><span class="to">-TO-</span><span class="french">FRENCH</span>
+        </h1>
     </header>
 
     <main>
-        <p>Enter your English word or phrase below and click
-            "Translate" to see the French translation.</p>
-
-        <label for="inputText">English:</label>
+        <p>Translate English to french now</p>
+        <p class="instruction">Enter your English word or phrase for translation below</p>
+        <div class="container">
+        <div class="languageContainer">
+        <label for="inputText">English</label>
         <textarea
             id="inputText"
-            rows="14"
-            cols="50"
             placeholder="Enter English text here..."
         ></textarea>
+        <button id="translateButton" type="button">Translate</button>
+        <button id="clearButton" type="button">Clear</button>
+        </div>
 
-        <p id="inputError" role="alert" aria-live="polite"></p>
-
-        <label for="outputText">French:</label>
+        <div class="languageContainer">
+        <label for="outputText">French</label>
         <textarea
             id="outputText"
-            rows="14"
-            cols="50"
             placeholder="French translation will appear here..."
             readonly
         ></textarea>
-
-        <button id="translateButton" type="button">Translate</button>
         <button id="copyButton" type="button">Copy</button>
-        <button id="clearButton" type="button">Clear</button>
-    </main>]
-    <script src="app.js" defer></script>
+        </div>
+        </div>
+
+    </main>
+    </div>
+
+    <footer class="siteFooter">
+        <div class="footerContent">
+            <img
+                class="footerLogo"
+                src="https://www.gdgbabcock.com/gdg-logo.svg"
+                alt="Google Developer Group, Babcock University"
+            >
+            <h2>GDG Babcock</h2>
+            <p>Google Developer Group</p>
+            <p>Babcock University</p>
+        </div>
+    </footer>
 </body>
 </html>
